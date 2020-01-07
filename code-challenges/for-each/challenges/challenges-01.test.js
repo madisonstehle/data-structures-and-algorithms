@@ -142,7 +142,20 @@ Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
 const fizzbuzz = (arr) => {
-  // Solution code here...
+  let outputArr = [];
+  arr.forEach(item => {
+    if (item % 15 === 0) {
+      outputArr.push('Fizz Buzz');
+    } else if (item % 5 === 0) {
+      outputArr.push('Buzz');
+    } else if (item % 3 === 0) {
+      outputArr.push('Fizz');
+    } else {
+      outputArr.push(item);
+    }
+  });
+
+  return outputArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
