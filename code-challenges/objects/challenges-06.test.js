@@ -93,24 +93,19 @@ hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenValues = (arr, character) => {
-  // arr.forEach( obj => {
-  //   if (Object.values(obj)){
-  //     return true;
-  //   } else { return false; }
-  // });
+  let children = [];
   arr.forEach( obj => {
-    let children = obj.children;
-    // console.log('this is the array: ', Object.values(arr));
-    console.log('this is the character names: ', Object.values(children));
-    // character = obj.name;
-    // for (let children in obj){
-    //   if (Object.values(obj)){
-    //     return true;
-    //   } else {
-    //     return false;
-    //   }
-    // }
+    let index;
+    if (character === obj.name){
+      Object.keys(obj).forEach( (key,idx) => {
+        if (key === 'children') {
+          index = idx;
+        }
+      });
+      children = Object.values(obj)[index];
+    }
   });
+  return children.length > 0;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -122,7 +117,19 @@ The input and output of this function are the same as the input and output from 
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenEntries = (arr, character) => {
-  // Solution code here...
+  let children = [];
+  arr.forEach( obj => {
+    let index;
+    if (character === obj.name) {
+      Object.keys(obj).forEach( (key,idx) => {
+        if (key === 'children'){
+          index = idx;
+        }
+      });
+      children = Object.entries(obj)[index];
+    }
+  });
+  return children[1].length > 0;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -132,7 +139,9 @@ Write a function named totalCharacters that takes in an array and returns the nu
 ------------------------------------------------------------------------------------------------ */
 
 const totalCharacters = (arr) => {
-  // Solution code here...
+  let allCharacters = [];
+
+  return allCharacters.length;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -209,7 +218,7 @@ describe('Testing challenge 3', () => {
   });
 });
 
-xdescribe('Testing challenge 4', () => {
+describe('Testing challenge 4', () => {
   test('It should return true for characters that have children', () => {
     expect(hasChildrenEntries(characters, 'Eddard')).toBeTruthy();
   });
@@ -219,7 +228,7 @@ xdescribe('Testing challenge 4', () => {
   });
 });
 
-xdescribe('Testing challenge 5', () => {
+describe('Testing challenge 5', () => {
   test('It should return the number of characters in the array', () => {
     expect(totalCharacters(characters)).toStrictEqual(26);
   });
