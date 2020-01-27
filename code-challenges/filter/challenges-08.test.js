@@ -25,7 +25,7 @@ For example, filterStringsWithVowels('gregor','hound','xyz') returns ['gregor', 
 
 const filterStringsWithVowels = (arr) => {
   let regex = (/[aeiou]/gm);
-  return arr.filter( str => str.match(regex));
+  return arr.filter( str => str.match(regex) );
 };
 
 
@@ -194,7 +194,7 @@ describe('Testing challenge 2', () => {
   });
 });
 
-xdescribe('Testing challenge 3', () => {
+describe('Testing challenge 3', () => {
   const firstNums = [1, 2, 3];
   const secondNums = [1, 2, 3, 4];
 
