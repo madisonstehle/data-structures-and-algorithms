@@ -24,7 +24,8 @@ For example, filterStringsWithVowels('gregor','hound','xyz') returns ['gregor', 
 
 
 const filterStringsWithVowels = (arr) => {
-  // Solution code here...
+  let regex = (/[aeiou]/gm);
+  return arr.filter( str => str.match(regex));
 };
 
 
@@ -180,7 +181,7 @@ describe('Testing challenge 1', () => {
   });
 });
 
-xdescribe('Testing challenge 2', () => {
+describe('Testing challenge 2', () => {
   test('It should return an array containing only words that have vowels', () => {
     expect(filterStringsWithVowels(['gregor','hound','xyz'])).toStrictEqual(['gregor', 'hound']);
     expect(filterStringsWithVowels(['gregor','hound','xyz']).length).toStrictEqual(2);
