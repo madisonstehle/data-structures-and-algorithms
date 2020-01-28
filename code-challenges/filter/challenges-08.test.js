@@ -38,13 +38,7 @@ For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 ------------------------------------------------------------------------------------------------ */
 
 const notInFirstArray = (forbiddenValues, arr) => {
-  return arr.filter( elem => {
-    if (forbiddenValues.indexOf(elem) === -1) {
-      return elem;
-    } else {
-      return null;
-    }
-  });
+  return arr.filter( elem => forbiddenValues.indexOf(elem) === -1 );
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -259,7 +253,7 @@ describe('Testing challenge 5', () => {
   });
 });
 
-xdescribe('Testing challenge 6', () => {
+describe('Testing challenge 6', () => {
   test('It should return an array containing characters who do not have children', () => {
     expect(getCharactersWithoutChildren(characters)).toStrictEqual([ { name: 'Sansa', spouse: 'Tyrion', house: 'Stark' }, { name: 'Jon', spouse: null, house: 'Snow' } ]);
     expect(getCharactersWithoutChildren(characters).length).toStrictEqual(2);
