@@ -9,7 +9,10 @@ Note: You may not use the array's built-in length property.
 ------------------------------------------------------------------------------------------------ */
 
 const countNumberOfElements = (arr) => {
-  // Solution code here...
+  return arr.reduce( accumulator => {
+    console.log(accumulator);
+    return accumulator + 1;
+  }, 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
