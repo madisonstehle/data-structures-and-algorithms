@@ -189,7 +189,13 @@ const isPrime = (value) => {
 };
 
 const countPrimeNumbers = (arr) => {
-  // Solution code here...
+  return arr.reduce( (acc, val, idx) => {
+    if (isPrime(val)){
+      return ++acc;
+    } else {
+      return acc;
+    }
+  }, 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -290,7 +296,7 @@ describe('Testing challenge 5', () => {
   });
 });
 
-xdescribe('Testing challenge 6', () => {
+describe('Testing challenge 6', () => {
   test('It should return a count of the prime numbers in the array', () => {
     expect(countPrimeNumbers([1, 2, 13, 64, 45, 56, 17, 8])).toStrictEqual(3);
   });
