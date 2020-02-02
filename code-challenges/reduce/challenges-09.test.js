@@ -86,7 +86,10 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 ------------------------------------------------------------------------------------------------ */
 
 const reversedString = (str) => {
-  // Solution code here...
+  let arr = str.split('');
+  return arr.reduce( (acc, val) => {
+    return val + acc;
+  }, '');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -139,7 +142,12 @@ const characters = [
 ];
 
 const countNumberOfChildren = (arr) => {
-  // Solution code here...
+  return arr.reduce( (acc, val) => {
+    if (val.children){
+      return acc + val.children.length;
+    }
+    return acc;
+  }, 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -255,13 +263,13 @@ describe('Testing challenge 2', () => {
   });
 });
 
-xdescribe('Testing challenge 3', () => {
+describe('Testing challenge 3', () => {
   test('It should return the string with the characters in reverse order', () => {
     expect(reversedString('Code 301')).toStrictEqual('103 edoC');
   });
 });
 
-xdescribe('Testing challenge 4', () => {
+describe('Testing challenge 4', () => {
   test('It should return the total number of children', () => {
     expect(countNumberOfChildren(characters)).toStrictEqual(14);
   });
