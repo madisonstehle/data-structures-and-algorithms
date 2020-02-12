@@ -45,12 +45,16 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 ------------------------------------------------------------------------------------------------ */
 
 const salesData = (hours, data) => {
-  let salesObjArr = new Array(hoursOpen.length).fill({});
+  let salesObjArr = [];
 
-  for (let i = 0; i <= salesObjArr.length-1; i++) {
-    salesObjArr[i].sales = `${data[i]} cookies`;
-    salesObjArr[i].time = hours[i];
-  }
+  hours.forEach( (value, i) => {
+    let obj = {};
+
+    obj['sales'] = `${data[i]} cookies`;
+    obj['time'] = value;
+
+    salesObjArr.push(obj);
+  });
 
   return salesObjArr;
 };
@@ -74,7 +78,14 @@ const errands = [
 ];
 
 const howManyTreats = (arr) => {
-  // Solution code here...
+  for (let i = 0; i < arr.length; i++)
+    if (arr[i].store === 'Pet store') {
+      for (let j = 0; j < arr[i].items.length; j++){
+        if (arr[i].items[j].name === 'Treats') {
+          return arr[i].items[j].quantity;
+        }
+      }
+    }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -96,7 +107,15 @@ The top row of the board is considered row zero and row numbers increase as they
 ------------------------------------------------------------------------------------------------ */
 
 const battleship = (board, row, col) => {
-  //  Solution code here...
+  for (let i = 0; i < board[row].length; i++){
+    for (let j = 0; j < board[col].length; j++){
+      if (board[row][col] === '#') {
+        return 'hit';
+      } else if (board[row][col] === ' ') {
+        return 'miss';
+      }
+    }
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -108,7 +127,13 @@ For example, the following input returns a product of 720: [[1,2], [3,4], [5,6]]
 ------------------------------------------------------------------------------------------------ */
 
 const calculateProduct = (numbers) => {
-  // Solution code here...
+  return numbers.map(arr => {
+    if (arr.length > 0) {
+      return arr.reduce((acc, val) => { return acc * val; } );
+    } else {
+      return 1;
+    }
+  }).reduce((acc, val) => { return acc * val; } );
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -128,7 +153,13 @@ const weeklyTemperatures = [
 ];
 
 const averageDailyTemperature = (weather) => {
-  // Solution code here...
+  return weather.map( arr => {
+    return arr.reduce( (acc, val) => {
+      return acc + val;
+    }) / arr.length;
+  }).reduce((acc, val) => {
+    return acc + val;
+  }) / weather.length;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -149,7 +180,19 @@ let lowestWeeklyTemperatureData = [
 ];
 
 const lowestWeeklyAverage = (weather) => {
-  // Solution code here...
+  let weeklyAvg = weather.map(arr => {
+    return arr.reduce((acc, val) => {
+      return acc + val;
+    }) / arr.length;
+  });
+  let lowestAvg = weeklyAvg.reduce((acc, val) => {
+    if (acc < val) {
+      return acc;
+    } else {
+      return val;
+    }
+  });
+  return lowestAvg;
 };
 
 /* ------------------------------------------------------------------------------------------------
