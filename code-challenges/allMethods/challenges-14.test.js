@@ -9,7 +9,17 @@ For example, ['apple', 'banana', 'MacGyver'] returns ['Apple', 'Banana', 'MacGyv
 ------------------------------------------------------------------------------------------------ */
 
 const toTitleCase = (arr) => {
-  // Solution code here...
+  return arr.map( word => {
+    let lowerToUpper = word.charAt(0).toUpperCase();
+
+    let eachWordArr = word.split('');
+
+    let sliceArr = eachWordArr.slice(1);
+
+    sliceArr.unshift(lowerToUpper);
+    
+    return sliceArr.join('');
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
