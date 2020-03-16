@@ -17,7 +17,7 @@ const toTitleCase = (arr) => {
     let sliceArr = eachWordArr.slice(1);
 
     sliceArr.unshift(lowerToUpper);
-    
+
     return sliceArr.join('');
   });
 };
