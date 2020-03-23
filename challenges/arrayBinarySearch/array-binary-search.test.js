@@ -22,7 +22,7 @@ describe('handling good input', () => {
   });
 })
 
-// ========== Expected Failures ==========
+// ========== Expected Failures & Edge Cases ==========
 let unsortedArray = [1, 2, 9, 8, 90, 13, 4, 20];
 let nullInput = null;
 let emptyArray = [];
@@ -39,11 +39,20 @@ describe( 'expected failures', () => {
       BinarySearch(nullInput, goodInputValueExists);
     }).toThrow();
   });
-
-  it('null search input will throw an error', () => {
-    expect( () => {
-      BinarySearch(goodInputArrayExists, nullInput);
-    }).toThrow();
-  });
   
+  it('empty array input will be -1', () => {
+    expect(BinarySearch(emptyArray, goodInputValueNotExists)).toBe(-1);
+  });
+
+});
+
+
+describe('edge cases', () => {
+  it('string input does not break it', () => {
+    expect(BinarySearch(stringInput, goodInputValueExists)).toBe(-1);
+  });
+
+  it('negative number inputs do not break it', () => {
+    expect(BinarySearch(negativeNumber, goodInputValueExists)).toBe(-1);
+  });
 })
