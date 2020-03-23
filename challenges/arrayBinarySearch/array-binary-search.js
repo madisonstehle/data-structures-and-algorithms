@@ -9,11 +9,25 @@ let InputArrayTwo = [11,22,33,44,55,66,77];
 let InputSearchTwo = 90;
 
 function BinarySearch(array, searchVal) {
-  // code here
+  let startIndex = 0;
+  let endIndex = array.length - 1;
+
+  while ( startIndex <= endIndex ) {
+    let middleIndex = Math.floor((startIndex + endIndex)/2);
+
+    if ( array[middleIndex] === searchVal ) {
+      return middleIndex;
+    } else if ( array[middleIndex] < searchVal ) {
+      startIndex = middleIndex + 1;
+    } else if ( array[middleIndex] > searchVal) {
+      startIndex = middleIndex - 1;
+    }
+  }
+  return -1;
 };
 
-// BinarySearch(InputArrayOne, InputSearchOne);
-// BinarySearch(InputArrayTwo, InputSearchTwo);
+BinarySearch(InputArrayOne, InputSearchOne);
+BinarySearch(InputArrayTwo, InputSearchTwo);
 
 // outputOne = 2;
 // outputTwo = -1;
