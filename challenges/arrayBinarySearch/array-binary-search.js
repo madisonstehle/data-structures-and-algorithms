@@ -31,3 +31,5 @@ BinarySearch(InputArrayTwo, InputSearchTwo);
 
 // outputOne = 2;
 // outputTwo = -1;
+
+module.exports = BinarySearch;
