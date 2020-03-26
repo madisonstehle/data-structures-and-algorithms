@@ -94,7 +94,17 @@ let starWarsData = [{
 }];
 
 let biggerThanLuke = (arr) => {
-  // Solution code here...
+  let mass = 0;
+
+  return arr.filter( obj => {
+    if ( obj.name === 'Luke Skywalker' ) {
+      mass = parseInt(obj.mass);
+    }
+    return obj.mass > mass;
+  }).map( obj => {
+    return obj.name;
+  }).join(' - ');
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -112,7 +122,15 @@ This data could be sorted by name or price.
 ------------------------------------------------------------------------------------------------ */
 
 const sortBy = (property, arr) => {
-  // Solution code here...
+  return arr.sort( (a, b) => {
+    if ( a[property] < b[property] ) {
+      return -1;
+    } else if ( a[property] > b[property] ){
+      return 1;
+    } else {
+      return 0;
+    }
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -128,7 +146,8 @@ https://secure.com returns true because the URL is secure
 https:/missingslash.org returns false because the URL is malformed
 ------------------------------------------------------------------------------------------------ */
 const isSecure = (url) => {
-// Solution code here...
+  let regex = (/^https:\/\/.+$/gm);
+  return regex.test(url);
 };
 
 /* ------------------------------------------------------------------------------------------------
