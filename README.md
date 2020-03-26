@@ -6,7 +6,7 @@ Code Fellows 301n16 & 401n16
 ### 301 Code Challenges
 - [Array forEach](./code-challenges/for-each/challenges/challenges-01.test.js)
 - [Pass by Reference](./code-challenges/value-vs-reference/challenges-02.test.js)
-- [Sort](./code-challenges/sort/challenges-03.test.jsv)
+- [Sort](./code-challenges/sort/challenges-03.test.js)
 - [Regular Expressions Pt. 1](./code-challenges/regular_expressions_pt1/challenges-04.test.js)
 - [Split, Join, Slice, Splice](./code-challenges/split-join-slice-splice/challenges-05.test.js)
 - [Object Iteration](./code-challenges/objects/challenges-06.test.js)
