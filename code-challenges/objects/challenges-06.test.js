@@ -139,9 +139,17 @@ Write a function named totalCharacters that takes in an array and returns the nu
 ------------------------------------------------------------------------------------------------ */
 
 const totalCharacters = (arr) => {
-  let allCharacters = [];
+  let numOfCharacters = arr.length;
 
-  return allCharacters.length;
+  arr.forEach ( obj => {
+    if ( obj.spouse ) {
+      numOfCharacters += 1;
+    }
+
+    numOfCharacters += obj.children.length;
+  });
+
+  return numOfCharacters;
 };
 
 /* ------------------------------------------------------------------------------------------------

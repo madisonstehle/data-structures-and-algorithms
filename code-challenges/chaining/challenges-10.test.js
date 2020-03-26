@@ -12,17 +12,17 @@ For example, count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]) returns 4.
 ------------------------------------------------------------------------------------------------ */
 
 const count = (target, input) => {
-  return input.forEach( arr => {
+  let total = 0;
+  input.forEach( arr => {
     return arr.reduce( (acc, val) => {
-      // console.log('val: ', val);
       if (val === target){
-        // console.log('acc: ', acc);
-        return ++acc;
-      } else {
-        return acc;
+        return ++total;
+      } else if ( val !== target) {
+        return total;
       }
     }, 0);
   });
+  return total;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -59,8 +59,18 @@ This function should then raise 2 to the power of the resulting numbers, returni
 For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 ------------------------------------------------------------------------------------------------ */
 
+// Thanks to the class code challenge review for help with this and the rest of chaining
+
 const divisibleByFiveTwoToThePower = (input) => {
-  // Solution code here...
+  return input.map( arr => {
+    return arr.filter( elem => {
+      return typeof(elem) === 'number' && elem % 5 === 0;
+    });
+  }).map( arr => {
+    return arr.map( num => {
+      return 2**num;
+    });
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -126,7 +136,11 @@ let starWarsData = [{
 }];
 
 let findMaleAndFemale = (data) => {
-  // Solution code here...
+  return data.filter( obj => {
+    return obj.gender === 'male' || obj.gender === 'female';
+  }).map( obj => {
+    return obj.name;
+  }).join(' and ');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -136,7 +150,9 @@ Write a function named findShortest that, given the Star Wars data from Challeng
 ------------------------------------------------------------------------------------------------ */
 
 let findShortest = (data) => {
-  // Solution code here...
+  return data.reduce( (acc, val) => {
+    return parseInt(acc.height) < parseInt(val.height) ? acc : val;
+  }).name;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -162,7 +178,7 @@ describe('Testing challenge 1', () => {
   });
 });
 
-xdescribe('Testing challenge 2', () => {
+describe('Testing challenge 2', () => {
   test('It should add all the numbers in the arrays', () => {
     const nums = [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6,]];
 
@@ -170,7 +186,7 @@ xdescribe('Testing challenge 2', () => {
   });
 });
 
-xdescribe('Testing challenge 3', () => {
+describe('Testing challenge 3', () => {
   test('It should return numbers divisible by five, then raise two to the power of the resulting numbers', () => {
     expect(divisibleByFiveTwoToThePower([[10, 20, 5, 4], [5, 6, 7, 9], [1, 10, 3]])).toStrictEqual([[1024, 1048576, 32], [32], [1024]]);
   });
@@ -184,14 +200,14 @@ xdescribe('Testing challenge 3', () => {
   });
 });
 
-xdescribe('Testing challenge 4', () => {
+describe('Testing challenge 4', () => {
   test('It should return only characters that are male or female', () => {
     expect(findMaleAndFemale(starWarsData)).toStrictEqual('Luke Skywalker and Darth Vader and Leia Organa');
     expect(findMaleAndFemale([{ name: 'person', gender: 'female' }, { gender: 'lol' }, { name: 'persontwo', gender: 'male' }])).toStrictEqual('person and persontwo');
   });
 });
 
-xdescribe('Testing challenge 5', () => {
+describe('Testing challenge 5', () => {
   test('It should return the name of the shortest character', () => {
     expect(findShortest(starWarsData)).toStrictEqual('R2-D2');
   });

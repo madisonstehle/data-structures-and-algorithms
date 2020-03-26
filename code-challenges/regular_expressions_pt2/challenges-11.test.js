@@ -29,8 +29,11 @@ Return either true or false.
 Note: if you ever need to validate an email using a regex in practice, the Internet has the actual regex you should use. It's many many lines long.
 ------------------------------------------------------------------------------------------------ */
 
+// Thanks to Kai for help with this one!
+
 const validateEmail = (email) => {
-  // Solution code here...
+  let regex = (/^\w+(\.\w+)?@\w+\.{1}(com|net|org)$/gmi);
+  return regex.test(email);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -54,8 +57,11 @@ Your function should include a single regular expression pattern that matches an
 Return either true or false.
 ------------------------------------------------------------------------------------------------ */
 
+// Thanks to Kai for help with this one!
+
 const validatePhoneNumber = (phoneNumber) => {
-  // Solution code here...
+  let regex = (/^([(]\d{3}[)]|\d{3})?( |-)?\d{3}( |-)?\d{4}$/gmi);
+  return regex.test(phoneNumber)
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -94,7 +100,7 @@ describe('Testing challenge 1', () => {
   });
 });
 
-xdescribe('Testing challenge 2', () => {
+describe('Testing challenge 2', () => {
   test('It should match a basic email', () => {
     expect(validateEmail('joe@codefellows.com')).toBeTruthy();
   });
@@ -124,7 +130,7 @@ xdescribe('Testing challenge 2', () => {
   });
 });
 
-xdescribe('Testing challenge 3', () => {
+describe('Testing challenge 3', () => {
   test('It should match the acceptable phone number formats', () => {
     expect(validatePhoneNumber('(555) 555-5555')).toBeTruthy();
     expect(validatePhoneNumber('555 555-5555')).toBeTruthy();
@@ -148,7 +154,7 @@ xdescribe('Testing challenge 3', () => {
   });
 });
 
-xdescribe('Testing challenge 4', () => {
+describe('Testing challenge 4', () => {
   test('It should return the closing tags', () => {
     expect(findTagNames(['<h1>Hello, world!</h1>', '<p>Welcome to my site</p>'])).toStrictEqual([ '/h1', '/p' ]);
   });

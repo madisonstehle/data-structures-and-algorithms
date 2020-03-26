@@ -207,8 +207,19 @@ The function should parse the string as rows and columns and compute the sum of 
 For example, excel('1,1,1\n4,4,4\n9,9,9') returns [3, 12, 27].
 ------------------------------------------------------------------------------------------------ */
 
+// Thanks to the class code challenge review for this one!
+
 const excel = (str) => {
-  // Solution code here...
+  let splitStr = str.split('\n');
+  let comma = splitStr.map( arr => {
+    return arr.split(',');
+  });
+
+  return comma.map( arr => {
+    return arr.reduce( (acc, cur) => {
+      return parseInt(acc) + parseInt(cur);
+    });
+  })
 };
 
 /* ------------------------------------------------------------------------------------------------
