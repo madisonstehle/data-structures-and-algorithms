@@ -18,6 +18,13 @@ describe('Linked List Ops', () => {
     expect(response.val).toBe('b');
   });
 
+  if('head points at beginning of list', () => {
+    let list = new LinkedList();
+    let response = list.insert('b');
+
+    expect(response.head.val).toBe('b');
+  })
+
   it('find an existing value', () => {
     let list = new LinkedList();
     list.insert('b');

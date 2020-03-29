@@ -1,20 +1,13 @@
 # Linked List Implementation
-<!-- Short summary or background information -->
-    
-## Links
-<!-- Link to pull request, passing tests, etc --> 
-- [Submission PR]()
-    
-## Challenge
 This application is implementation of a Linked List class, and any important methods related to that.
     
-## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+## Links
+- [Submission PR](https://github.com/madisonstehle/data-structures-and-algorithms/pull/36)
     
-## API
-<!-- Description of each method publicly available to your Linked List -->
+## Challenge
+In this file, your task will be to create two classes, Node and LinkedList. Both should be exported by this file.
+
     
 ## Testing
-<!-- Description of how to run your tests -->
- - Run test files: `npm test`
+ - Run test files: `npm test linked-list.test.js`
  - Run linter: `npm run lint`
