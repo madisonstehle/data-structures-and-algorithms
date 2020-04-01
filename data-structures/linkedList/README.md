@@ -2,7 +2,7 @@
 This application is implementation of a Linked List class, and any important methods related to that.
     
 ## Links
-- [Submission PR](https://github.com/madisonstehle/data-structures-and-algorithms/pull/36)
+- [Submission PR](https://github.com/madisonstehle/data-structures-and-algorithms/pull/37)
     
 ## Challenge
 In this file, your task will be to create two classes, Node and LinkedList. Both should be exported by this file.
