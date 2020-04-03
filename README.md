@@ -18,6 +18,9 @@ Code Fellows 301n16 & 401n16
 - [All Methods](./code-challenges/allMethods/challenges-14.test.js)
 
 
+## 401 Data Structure Challenges
+### [Linked List README.md](./data-structures/linkedList/README.md)
+
 ## 401 Code Challenges
 
 ### [Reverse an Array](./challenges/arrayReverse/array-reverse.js)

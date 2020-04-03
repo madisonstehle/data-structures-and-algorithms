@@ -1,7 +1,6 @@
 'use strict';
 
 let linkedListContent = require('./linked-list.js');
-
 let LinkedList = linkedListContent.LinkedList
 
 
@@ -18,11 +17,12 @@ describe('Linked List Ops', () => {
     expect(response.val).toBe('b');
   });
 
-  if('head points at beginning of list', () => {
+  it('head points at beginning of list', () => {
     let list = new LinkedList();
-    let response = list.insert('b');
+    list.insert('a');
+    list.insert('b');
 
-    expect(response.head.val).toBe('b');
+    expect(list.head.val).toBe('b');
   })
 
   it('find an existing value', () => {
@@ -39,5 +39,67 @@ describe('Linked List Ops', () => {
     let response = list.toString();
 
     expect(response).toBe('{ b } -> NULL');
+  });
+
+  it('add a node to the end', () => {
+      let list = new LinkedList();
+      list.insert('a');
+      list.append('b');
+      let response = list.append('c');
+
+      expect(response.val).toBe('c');  
+  });
+
+  it('can add multiple nodes to the end', () => {
+    let list = new LinkedList();
+    list.insert('a');
+    list.append('b');
+    list.append('c');
+
+    let response = list.toString();
+
+    expect(response).toBe('{ a } -> { b } -> { c } -> NULL');
+  });
+
+  it('insert a node before a node in the middle', () => {
+    let list = new LinkedList();
+    list.insert('a');
+    list.append('b');
+    list.append('c');
+    list.insertBefore('b', 'z');
+
+    let response = list.toString();
+    expect(response).toBe('{ a } -> { z } -> { b } -> { c } -> NULL');
+  });
+
+  it('insert a node before the first node', () => {
+    let list = new LinkedList();
+    list.insert('a');
+    list.append('b');
+    list.insertBefore('a', 'z');
+
+    expect(list.head.val).toBe('z');
+  });
+
+  it('insert after a node in the middle', () => {
+    let list = new LinkedList();
+    list.insert('a');
+    list.append('b');
+    list.append('c');
+    list.insertAfter('b', 'z');
+
+    let response = list.toString()
+    expect(response).toBe('{ a } -> { b } -> { z } -> { c } -> NULL');
+  });
+
+  it('insert a node after the last node', () => {
+    let list = new LinkedList();
+    list.insert('a');
+    list.append('b');
+    list.append('c');
+    list.insertAfter('c', 'z');
+
+    let response = list.toString()
+    expect(response).toBe('{ a } -> { b } -> { c } -> { z } -> NULL');
   })
 })

@@ -68,6 +68,76 @@ class LinkedList {
       console.error('ERROR PRINTING LIST')
     }
   }
+
+  append(value){
+    try {
+      let newNode = new Node(value);
+      let currentNode = this.head;
+
+      while (currentNode.next !== null) {
+        currentNode = currentNode.next;
+      }
+
+      currentNode.next = newNode;
+
+      return newNode;
+    }
+    catch(e) {
+      console.error('ERROR APPENDING NODE');
+    }
+  }
+
+  insertBefore(targetValue, newVal){
+    try {
+      let newNode = new Node(newVal);
+      let currentNode = this.head;
+
+      if(currentNode.val === targetValue){
+        newNode.next = this.head;
+        this.head = newNode;
+      }
+
+      while(currentNode.next !== null){
+        if (currentNode.next.val === targetValue) {
+          newNode.next = currentNode.next;
+          currentNode.next = newNode;
+          return;
+        } 
+        else if (currentNode.next.val !== targetValue) {
+          currentNode = currentNode.next;
+        }
+        else {
+          console.log('that value doesn\'t exist in this list!');
+          return false;
+        }
+      }
+
+    }
+    catch(e) {
+      console.error(`ERROR INSERTING ${newVal} BEFORE ${targetVal}`);
+    }
+  }
+
+  insertAfter(targetValue, newVal){
+    try {
+      let newNode = new Node(newVal);
+      let currentNode = this.head;
+
+      while(currentNode){
+        if (currentNode.val === targetValue) {
+          newNode.next = currentNode.next;
+          currentNode.next = newNode;
+          return;
+        } 
+          currentNode = currentNode.next;
+      }
+
+      console.log('that value doesn\'t exist in this list!');
+    }
+    catch(e){
+      console.error(`ERROR INSERTING ${newVal} AFTER ${targetValue}`)
+    }
+  }
 };
 
 module.exports = { Node, LinkedList };
