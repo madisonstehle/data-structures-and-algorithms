@@ -9,11 +9,11 @@ let LinkedList = linkedListContent.LinkedList
 // Create a list, insert items, find an item, print string
 let list = new LinkedList();
 
-list.insert('a');
+// list.insert('a');
 
-list.append('b');
-list.append('c');
-list.append('d');
+// list.append('b');
+// list.append('c');
+// list.append('d');
 
 // list.insertBefore('c', 'z');
 // list.insertBefore('i', 'z');
@@ -26,4 +26,4 @@ list.append('d');
 // list.includes('b');
 // list.includes('x');
 
-list.toString();
+// list.toString();

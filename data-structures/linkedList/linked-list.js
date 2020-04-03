@@ -70,7 +70,6 @@ class LinkedList {
   }
 
   append(value){
-    // which adds a new node with the given value to the end of the list
     try {
       let newNode = new Node(value);
       let currentNode = this.head;
@@ -80,6 +79,8 @@ class LinkedList {
       }
 
       currentNode.next = newNode;
+
+      return newNode;
     }
     catch(e) {
       console.error('ERROR APPENDING NODE');
