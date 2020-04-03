@@ -13,10 +13,17 @@ list.insert('a');
 
 list.append('b');
 list.append('c');
+list.append('d');
+
+// list.insertBefore('c', 'z');
+// list.insertBefore('i', 'z');
+// list.insertBefore('a', 'w');
+
+// list.insertAfter('b', 'q');
+// list.insertAfter('d', 'j');
+// list.insertAfter('v', 'm');
 
 // list.includes('b');
-// list.includes('f');
-// list.includes('a');
-// list.includes('j');
+// list.includes('x');
 
 list.toString();

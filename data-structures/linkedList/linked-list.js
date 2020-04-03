@@ -86,12 +86,56 @@ class LinkedList {
     }
   }
 
-  insertBefore(value, newVal){
-    // which add a new node with the given newValue immediately before the first value node
+  insertBefore(targetValue, newVal){
+    try {
+      let newNode = new Node(newVal);
+      let currentNode = this.head;
+
+      if(currentNode.val === targetValue){
+        newNode.next = this.head;
+        this.head = newNode;
+      }
+
+      while(currentNode.next !== null){
+        if (currentNode.next.val === targetValue) {
+          newNode.next = currentNode.next;
+          currentNode.next = newNode;
+          return;
+        } 
+        else if (currentNode.next.val !== targetValue) {
+          currentNode = currentNode.next;
+        }
+        else {
+          console.log('that value doesn\'t exist in this list!');
+          return false;
+        }
+      }
+
+    }
+    catch(e) {
+      console.error(`ERROR INSERTING ${newVal} BEFORE ${targetVal}`);
+    }
   }
 
-  insertAfter(value, newVal){
-    // which add a new node with the given newValue immediately after the first value node
+  insertAfter(targetValue, newVal){
+    try {
+      let newNode = new Node(newVal);
+      let currentNode = this.head;
+
+      while(currentNode){
+        if (currentNode.val === targetValue) {
+          newNode.next = currentNode.next;
+          currentNode.next = newNode;
+          return;
+        } 
+          currentNode = currentNode.next;
+      }
+
+      console.log('that value doesn\'t exist in this list!');
+    }
+    catch(e){
+      console.error(`ERROR INSERTING ${newVal} AFTER ${targetValue}`)
+    }
   }
 };
 
