@@ -138,6 +138,44 @@ class LinkedList {
       console.error(`ERROR INSERTING ${newVal} AFTER ${targetValue}`)
     }
   }
+
+  kthFromEnd(k){
+    if (this.head === null) {
+      console.log('This list is empty!');
+      return;
+    }
+
+    let length = 1;
+    let currentNode = this.head;
+    
+    while(currentNode !== null){
+      length++;
+      currentNode = currentNode.next;
+    }
+
+    if (length < k) {
+      console.log(`This list is too short to print ${k} from the end!`);
+      return;
+    }
+    
+    let bufferNode = this.head;
+    let kNode = this.head;
+    let bufferCount = k;
+
+    while (bufferCount > 0) {
+      bufferNode = bufferNode.next;
+      bufferCount--;
+    }
+
+    while (bufferNode !== null) {
+      bufferNode = bufferNode.next;
+      kNode = kNode.next;
+    }
+
+    console.log(`the value ${k} from the end is ${kNode.val}`);
+    return kNode.val;
+    
+  };
 };
 
 module.exports = { Node, LinkedList };
