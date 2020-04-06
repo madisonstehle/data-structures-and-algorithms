@@ -10,18 +10,18 @@ let inputValTwo = 16;
 
 const insertShiftArray = (arr, val) => {
   let newArr = [];
-    for ( let i = 0; i <= Math.ceil(arr.length/2) ; i++ ){
-      if (i !== Math.ceil(arr.length/2)){
-        newArr[i] = arr[i];
-      } else if (i === Math.ceil(arr.length/2)){
-        newArr[i] = val;
-        for ( let j = Math.ceil(arr.length/2) + 1; j <= arr.length ; j++ ){
-          newArr[j] = arr[j - 1];
-        }
+  for ( let i = 0; i <= Math.ceil(arr.length/2) ; i++ ){
+    if (i !== Math.ceil(arr.length/2)){
+      newArr[i] = arr[i];
+    } else if (i === Math.ceil(arr.length/2)){
+      newArr[i] = val;
+      for ( let j = Math.ceil(arr.length/2) + 1; j <= arr.length ; j++ ){
+        newArr[j] = arr[j - 1];
       }
+    }
   }
   return newArr;
-}
+};
 
 insertShiftArray(inputArrOne, inputValOne);
 insertShiftArray(inputArrTwo, inputValTwo);

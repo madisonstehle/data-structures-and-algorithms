@@ -4,8 +4,9 @@
 let linkedListContent = require('./data-structures/linkedList/linked-list.js');
 
 // ========== CLASS ==========
-let LinkedList = linkedListContent.LinkedList
+let LinkedList = linkedListContent.LinkedList;
 
+// ========== LINKED LIST CALLS ==========
 // Create a list, insert items, find an item, print string, find an item k from the end
 let list = new LinkedList();
 
@@ -29,6 +30,6 @@ list.append('d');
 // list.kthFromEnd(2);
 // list.kthFromEnd(7);
 // list.kthFromEnd(4);
-list.kthFromEnd(1);
+// list.kthFromEnd(1);
 
 list.toString();
