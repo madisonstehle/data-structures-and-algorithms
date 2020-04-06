@@ -140,6 +140,12 @@ class LinkedList {
   }
 
   kthFromEnd(k){
+    if (k < 0) {
+      let negMsg = '"k" must be a positive integer!';
+      console.log(negMsg);
+      return negMsg;
+    }
+
     if (this.head === null) {
       console.log('This list is empty!');
       return;
@@ -154,8 +160,9 @@ class LinkedList {
     }
 
     if (length < k) {
-      console.log(`This list is too short to print ${k} from the end!`);
-      return;
+      let lengthMsg = `This list is too short to print ${k} from the end!`;
+      console.log(lengthMsg);
+      return lengthMsg;
     }
     
     let bufferNode = this.head;

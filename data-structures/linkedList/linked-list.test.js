@@ -3,11 +3,6 @@
 let linkedListContent = require('./linked-list.js');
 let LinkedList = linkedListContent.LinkedList
 
-// Where k is greater than the length of the linked list
-// Where k and the length of the list are the same
-// Where k is not a positive integer
-// Where the linked list is of a size 1
-// “Happy Path” where k is not at the end, but somewhere in the middle of the linked list
 
 describe('Linked List Ops', () => {
   it('add a new list', () => {
@@ -106,5 +101,54 @@ describe('Linked List Ops', () => {
 
     let response = list.toString()
     expect(response).toBe('{ a } -> { b } -> { c } -> { z } -> NULL');
+  });
+
+  it('k is greater than the length of the list', () => {
+    let list = new LinkedList();
+    list.insert('a');
+    list.append('b');
+    list.append('c');
+    let response = list.kthFromEnd(7);
+
+    expect(response).toBe('This list is too short to print 7 from the end!');
+  });
+
+  it('k and the length of list are the same', () => {
+    let list = new LinkedList();
+    list.insert('a');
+    list.append('b');
+    list.append('c');
+    let response = list.kthFromEnd(3);
+
+    expect(response).toBe('a');
+  });
+
+  it('k is not a positive integer', () => {
+    let list = new LinkedList();
+    list.insert('a');
+    list.append('b');
+    list.append('c');
+    let response = list.kthFromEnd(-2);
+
+    expect(response).toBe('"k" must be a positive integer!');
+  });
+
+  it('the linked list is of a size 1', () => {
+    let list = new LinkedList();
+    list.insert('a');
+    let response = list.kthFromEnd(1);
+
+    expect(response).toBe('a');
+  });
+
+  it('k is somewhere in the middle of the list', () => {
+    let list = new LinkedList();
+    list.insert('a');
+    list.append('b');
+    list.append('c');
+    list.append('d');
+    let response = list.kthFromEnd(2);
+
+    expect(response).toBe('c');
   })
 })
