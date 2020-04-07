@@ -10,7 +10,7 @@ const reverseArray = (arr) => {
     reversedArr[j] = arr[i];
   }
   return reversedArr;
-}
+};
 
 reverseArray(inputOne);
 reverseArray(inputTwo);

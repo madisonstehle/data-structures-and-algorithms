@@ -6,7 +6,7 @@ class Node {
     this.next = null;
     this.prev = null;
   }
-};
+}
 
 class LinkedList {
   constructor(){
@@ -21,9 +21,9 @@ class LinkedList {
       this.head = newNode;
 
       return newNode;
-    } 
+    }
     catch(e) {
-      console.error('ERROR INSERTING NODE')
+      console.error('ERROR INSERTING NODE');
     }
   }
 
@@ -38,14 +38,14 @@ class LinkedList {
         }
         else {
           curVal = curVal.next;
-        }  
+        }
       }
 
-      console.log(false); 
+      console.log(false);
       return false;
-    } 
+    }
     catch(e) {
-      console.error('ERROR FINDING VALUE')
+      console.error('ERROR FINDING VALUE');
     }
   }
 
@@ -63,9 +63,9 @@ class LinkedList {
 
       console.log(str);
       return str;
-    } 
+    }
     catch(e) {
-      console.error('ERROR PRINTING LIST')
+      console.error('ERROR PRINTING LIST');
     }
   }
 
@@ -102,7 +102,7 @@ class LinkedList {
           newNode.next = currentNode.next;
           currentNode.next = newNode;
           return;
-        } 
+        }
         else if (currentNode.next.val !== targetValue) {
           currentNode = currentNode.next;
         }
@@ -114,7 +114,7 @@ class LinkedList {
 
     }
     catch(e) {
-      console.error(`ERROR INSERTING ${newVal} BEFORE ${targetVal}`);
+      console.error(`ERROR INSERTING ${newVal} BEFORE ${targetValue}`);
     }
   }
 
@@ -128,16 +128,60 @@ class LinkedList {
           newNode.next = currentNode.next;
           currentNode.next = newNode;
           return;
-        } 
-          currentNode = currentNode.next;
+        }
+        currentNode = currentNode.next;
       }
 
       console.log('that value doesn\'t exist in this list!');
     }
     catch(e){
-      console.error(`ERROR INSERTING ${newVal} AFTER ${targetValue}`)
+      console.error(`ERROR INSERTING ${newVal} AFTER ${targetValue}`);
     }
   }
-};
+
+  kthFromEnd(k){
+    if (k < 0) {
+      let negMsg = '"k" must be a positive integer!';
+      console.log(negMsg);
+      return negMsg;
+    }
+
+    if (this.head === null) {
+      console.log('This list is empty!');
+      return;
+    }
+
+    let length = 1;
+    let currentNode = this.head;
+
+    while(currentNode !== null){
+      length++;
+      currentNode = currentNode.next;
+    }
+
+    if (length < k) {
+      let lengthMsg = `This list is too short to print ${k} from the end!`;
+      console.log(lengthMsg);
+      return lengthMsg;
+    }
+
+    let bufferNode = this.head;
+    let kNode = this.head;
+    let bufferCount = k;
+
+    while (bufferCount > 0) {
+      bufferNode = bufferNode.next;
+      bufferCount--;
+    }
+
+    while (bufferNode !== null) {
+      bufferNode = bufferNode.next;
+      kNode = kNode.next;
+    }
+
+    console.log(`the value ${k} from the end is ${kNode.val}`);
+    return kNode.val;
+  }
+}
 
 module.exports = { Node, LinkedList };

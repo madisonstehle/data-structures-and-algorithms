@@ -61,7 +61,7 @@ Return either true or false.
 
 const validatePhoneNumber = (phoneNumber) => {
   let regex = (/^([(]\d{3}[)]|\d{3})?( |-)?\d{3}( |-)?\d{4}$/gmi);
-  return regex.test(phoneNumber)
+  return regex.test(phoneNumber);
 };
 
 /* ------------------------------------------------------------------------------------------------

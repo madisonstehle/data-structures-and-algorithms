@@ -45,7 +45,7 @@ For example, (123) 456-7890 returns 1234567890
 const standardizePhoneNumbers = (arr) => {
   return arr.map( arrNum => {
     return arrNum.substring(1,4) + arrNum.substring(6,9) + arrNum.substring(10, 15);
-  })
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -119,11 +119,11 @@ For example, [['Brook Testing', 'Actual Person'], ['Human Person', 'Brook again'
 ------------------------------------------------------------------------------------------------ */
 
 const unenrollBrook = (arr) => {
-    return arr.map( array => {
-      return array.filter( str => {
-        return !str.includes('Brook');
-      })
-    })
+  return arr.map( array => {
+    return array.filter( str => {
+      return !str.includes('Brook');
+    });
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------

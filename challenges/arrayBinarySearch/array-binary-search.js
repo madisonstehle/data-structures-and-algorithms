@@ -24,7 +24,7 @@ function BinarySearch(array, searchVal) {
     }
   }
   return -1;
-};
+}
 
 BinarySearch(InputArrayOne, InputSearchOne);
 BinarySearch(InputArrayTwo, InputSearchTwo);
