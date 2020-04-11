@@ -19,8 +19,9 @@ listTwo.append(4);
 // ========== FUNCTION ==========
 const mergeLists = function(list1, list2){
   try {
-    if(!list1) return list2;
-    if(!list2) return list1;  
+    if(!list1.head && !list2.head) return null;
+    if(!list1.head) return list2;
+    if(!list2.head) return list1;  
 
     let zippedList = new LinkedList();
 

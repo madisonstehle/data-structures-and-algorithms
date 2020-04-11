@@ -40,10 +40,25 @@ describe('happy path', () => {
 
 
 describe('expected failures', () => {
+  it('errors when given data that isn\'t a list', () => {
+    let response = mergeLists.mergeLists(2, 1);
 
+    expect(response).toBeFalsy();
+  })
 })
 
 
 describe('edge cases', () => {
+  it('if given an empty list, returns the other list', () => {
+    let listOne = new LinkedList();
+    let listTwo = new LinkedList();
+    listOne.insert(1);
+    listOne.append(3);
 
+    let response = mergeLists.mergeLists(listOne, listTwo);
+    console.log(response)
+
+    expect(response.head.val).toBe(1);
+    expect(response.head.next.val).toBe(3);
+  })
 })
