@@ -35,6 +35,14 @@ describe('happy path', () => {
     expect(response.next.next.val).toBe(3);
     expect(response.next.next.next.val).toBe(4);
     expect(response.next.next.next.next).toBeFalsy();
+  });
+
+  it('list1 is shorter than list2', () => {
+
+  });
+
+  it('list2 is shorter than list1', () => {
+
   })
 })
 
@@ -44,7 +52,11 @@ describe('expected failures', () => {
     let response = mergeLists.mergeLists(2, 1);
 
     expect(response).toBeFalsy();
-  })
+  });
+
+  it('either list1 or list2 is not a linked list', () => {
+
+  });
 })
 
 
@@ -60,5 +72,13 @@ describe('edge cases', () => {
 
     expect(response.head.val).toBe(1);
     expect(response.head.next.val).toBe(3);
-  })
+  });
+
+  it('list1 is very long, list2 is very short', () => {
+
+  });
+
+  it('list1 and list2 are equivalent', () => {
+
+  });
 })
