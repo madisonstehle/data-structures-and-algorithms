@@ -17,7 +17,7 @@ listOne.append(3);
 listTwo.append(4);
 
 // ========== FUNCTION ==========
-function mergeLists(list1, list2){
+const mergeLists = function(list1, list2){
   try {
     if(!list1) return list2;
     if(!list2) return list1;  
@@ -40,11 +40,14 @@ function mergeLists(list1, list2){
         currentZipNode = newNode1; 
         zippedList.head = newNode1;
         currentZipNode.next = new Node(currentNodeTwo.val);
+        // zippedList.insert(currentNodeOne.val);
       } else {
+        // zippedList.append(currentNodeOne.val)
         newNode1.next = new Node(currentNodeTwo.val);
         currentZipNode.next = newNode1; 
       }
 
+      console.log('ZIPPED LIST', zippedList);
       currentZipNode = currentZipNode.next; 
       currentNodeOne = currentNodeOne.next;
       currentNodeTwo = currentNodeTwo.next;
@@ -59,4 +62,8 @@ function mergeLists(list1, list2){
 }
 
 // ========== CALL THE FUNCTION ==========
-mergeLists(listOne, listTwo);
+// mergeLists(listOne, listTwo);
+
+
+module.exports = { mergeLists: mergeLists};
+
