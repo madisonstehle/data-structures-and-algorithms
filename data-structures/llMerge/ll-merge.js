@@ -20,44 +20,6 @@ listOne.append(5);
 listTwo.append(6);
 
 // ========== FUNCTION ==========
-const mergeLists1 = function(list1, list2){
-  try {
-    if(!list1.head && !list2.head) return null;
-    if(!list1.head) return list2;
-    if(!list2.head) return list1;  
-
-    let zippedList = new LinkedList();
-
-    let currentZipNode = zippedList.head;
-    let currentNodeOne = list1.head;
-    let currentNodeTwo = list2.head;
-
-    while (currentNodeOne || currentNodeTwo) {
-      let newNode1 = new Node(currentNodeOne.val); 
-
-      if(zippedList.head === null){
-        currentZipNode = newNode1; 
-        zippedList.head = newNode1;
-        currentZipNode.next = new Node(currentNodeTwo.val);
-      } else {
-        newNode1.next = new Node(currentNodeTwo.val);
-        currentZipNode.next = newNode1; 
-      }
-
-      console.log('ZIPPED LIST', zippedList);
-      currentZipNode = currentZipNode.next; 
-      currentNodeOne = currentNodeOne.next;
-      currentNodeTwo = currentNodeTwo.next;
-
-    }
-    zippedList.toString();
-    return zippedList.head;
-  }
-  catch(e) {
-    console.error('ERROR ZIPPING LISTS');
-  }
-}
-
 const mergeLists = function(list1, list2){
   try {
     if(!list1.head && !list2.head) return null;
@@ -71,13 +33,12 @@ const mergeLists = function(list1, list2){
     let currentNodeTwo = list2.head;
 
     while (currentNodeOne || currentNodeTwo) {
-      let newNode = new Node(currentNodeOne.val); 
-
-      if (currentNodeOne){
-        if(zippedList.head === null){
+      
+      if (currentNodeOne) {
+        if (!zippedList.head) {
+          let newNode = new Node(currentNodeOne.val); 
           currentZipNode = newNode; 
           zippedList.head = newNode;
-          // currentZipNode.next = new Node(currentNodeTwo.val);
         } else {
           currentZipNode.next = currentNodeOne;
           currentZipNode = currentZipNode.next;
@@ -86,10 +47,10 @@ const mergeLists = function(list1, list2){
       }
 
       if (currentNodeTwo) {
-        if(zippedList.head === null){
+        if (!zippedList.head) {
+          let newNode = new Node(currentNodeTwo.val); 
           currentZipNode = newNode; 
           zippedList.head = newNode;
-          // currentZipNode.next = new Node(currentNodeTwo.val);
         } else {
           currentZipNode.next = currentNodeTwo;
           currentZipNode = currentZipNode.next;
@@ -98,7 +59,6 @@ const mergeLists = function(list1, list2){
       }
 
     }
-    zippedList.toString();
     return zippedList.head;
   }
   catch(e) {
@@ -107,7 +67,7 @@ const mergeLists = function(list1, list2){
 }
 
 // ========== CALL THE FUNCTION ==========
-mergeLists(listOne, listTwo);
+// mergeLists(listOne, listTwo);
 
 
 module.exports = { mergeLists: mergeLists};
