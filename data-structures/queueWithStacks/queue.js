@@ -32,7 +32,6 @@ class Queue {
   }
 
   dequeue() {
-    try {
       if (this.isEmpty()){
         throw 'NullReferenceException';
       }
@@ -41,10 +40,6 @@ class Queue {
       this.front = this.front.next;
       currentFront.next = null;
       return currentFront;
-    }
-    catch(e) {
-      console.error('ERROR DEQUEUING NODE', e);
-    }
   }
 
   peek() {
