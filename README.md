@@ -21,6 +21,7 @@ Code Fellows 301n16 & 401n16
 ## 401 Data Structure Challenges
 ### [Linked List Class](./data-structures/linkedList/README.md)
 ### [Merge a Linked List](./data-structures/llMerge/README.md)
+### [Stacks & Queues](./data-structures/queueWithStacks/README.md)
 
 ## 401 Code Challenges
 
@@ -40,13 +41,3 @@ Code Fellows 301n16 & 401n16
 - **Challenge**: Write a function called BinarySearch which takes in 2 parameters: a sorted array and the search key. Without utilizing any of the built-in methods available to your language, return the index of the array’s element that is equal to the search key, or -1 if the element does not exist.
 - **Approach & Efficiency**: The article [Binary Search Algorithm](https://en.wikipedia.org/wiki/Binary_search_algorithm) on Wikipedia helped me conceptualize the problem and [this article on Medium](https://medium.com/@jeffrey.allen.lewis/javascript-algorithms-explained-binary-search-25064b896470) gave me a more detailed explaination of what is actually happening in a binary search. I'd never heard of this method before this code challenge. I knew that I had to use a `while` loop, since a `for` loop would hit every item in succession instead of picking out the middle. I also knew that I would have to capture the moving middle index and also have some way of moving either the "starting" or "ending" points in the search field. I also knew I would would have to check with `if` statements on which direction to move the goal posts. The articles I linked helped me tie together those thoughts syntatically.
 - **Solution**: ![Binary Search Whiteboard](assets/binary-search-whiteboard.PNG)
-
-
-### [Queue with Stacks](./challenges/queueWithStacks/queue-with-stacks.js)
-- **Challenge**: Create a brand new `PseudoQueue` class. Do not use an existing Queue. Instead, this PseudoQueue class will implement our standard queue interface (the two methods listed below), but will internally only utilize 2 `Stack` objects. Ensure that you create your class with the following methods:
-  - `enqueue(value)` which inserts `value` into the PseudoQueue, using a first-in, first-out approach.
-  - `dequeue()` which extracts a value from the PseudoQueue, using a first-in, first-out approach.
-
-  The Stack instances have only push, pop, and peek methods. You should use your own Stack implementation. Instantiate these Stack objects in your PseudoQueue constructor.
-- **Approach & Efficiency**:
-- **Solution**:
