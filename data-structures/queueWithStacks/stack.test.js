@@ -1,6 +1,6 @@
 'use strict';
 
-const Stack = require('./stack.js')
+const Stack = require('./stack.js');
 
 describe('Happy Path', () => {
   it('can push onto a stack', () => {
@@ -38,7 +38,7 @@ describe('Happy Path', () => {
     let stack = new Stack();
     stack.push('a');
     stack.push('b');
-  })
+  });
 });
 
 describe('Expected Failure', () => {

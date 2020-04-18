@@ -18,7 +18,7 @@ class Stack {
     if (this.isEmpty()) {
       this.top = newNode;
       return;
-    };
+    }
 
     newNode.next = this.top;
     this.top = newNode;
@@ -39,7 +39,7 @@ class Stack {
   peek() {
     if (this.top) {
       return this.top.val;
-    };
+    }
 
     throw 'NullReferenceException';
   }
@@ -47,7 +47,7 @@ class Stack {
   isEmpty(){
     if (this.top) {
       return false;
-    };
+    }
 
     return true;
   }

@@ -32,14 +32,14 @@ class Queue {
   }
 
   dequeue() {
-      if (this.isEmpty()){
-        throw 'NullReferenceException';
-      }
+    if (this.isEmpty()){
+      throw 'NullReferenceException';
+    }
 
-      let currentFront = this.front;
-      this.front = this.front.next;
-      currentFront.next = null;
-      return currentFront;
+    let currentFront = this.front;
+    this.front = this.front.next;
+    currentFront.next = null;
+    return currentFront;
   }
 
   peek() {
@@ -53,7 +53,7 @@ class Queue {
   isEmpty(){
     if (this.front && this.rear) {
       return false;
-    };
+    }
 
     return true;
   }

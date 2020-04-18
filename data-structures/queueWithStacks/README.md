@@ -1,7 +1,7 @@
 # Stacks & Queues
     
 ## Links
-- [Submission PR]()
+- [Submission PR](https://github.com/madisonstehle/data-structures-and-algorithms/pull/40)
 
 
 ## Challenge
