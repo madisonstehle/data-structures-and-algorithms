@@ -24,7 +24,7 @@ const mergeLists = function(list1, list2){
   try {
     if(!list1.head && !list2.head) return null;
     if(!list1.head) return list2;
-    if(!list2.head) return list1;  
+    if(!list2.head) return list1;
 
     let zippedList = new LinkedList();
 
@@ -33,11 +33,11 @@ const mergeLists = function(list1, list2){
     let currentNodeTwo = list2.head;
 
     while (currentNodeOne || currentNodeTwo) {
-      
+
       if (currentNodeOne) {
         if (!zippedList.head) {
-          let newNode = new Node(currentNodeOne.val); 
-          currentZipNode = newNode; 
+          let newNode = new Node(currentNodeOne.val);
+          currentZipNode = newNode;
           zippedList.head = newNode;
         } else {
           currentZipNode.next = currentNodeOne;
@@ -48,8 +48,8 @@ const mergeLists = function(list1, list2){
 
       if (currentNodeTwo) {
         if (!zippedList.head) {
-          let newNode = new Node(currentNodeTwo.val); 
-          currentZipNode = newNode; 
+          let newNode = new Node(currentNodeTwo.val);
+          currentZipNode = newNode;
           zippedList.head = newNode;
         } else {
           currentZipNode.next = currentNodeTwo;
@@ -64,7 +64,7 @@ const mergeLists = function(list1, list2){
   catch(e) {
     console.error('ERROR ZIPPING LISTS');
   }
-}
+};
 
 // ========== CALL THE FUNCTION ==========
 // mergeLists(listOne, listTwo);

@@ -10,7 +10,7 @@ describe('happy path', () => {
     let listTwo = new LinkedList();
     listOne.insert(1);
     listTwo.insert(2);
-    
+
     listOne.append(3);
     listTwo.append(4);
 
@@ -24,7 +24,7 @@ describe('happy path', () => {
     let listTwo = new LinkedList();
     listOne.insert(1);
     listTwo.insert(2);
-    
+
     listOne.append(3);
     listTwo.append(4);
 
@@ -42,7 +42,7 @@ describe('happy path', () => {
     let listTwo = new LinkedList();
     listOne.insert(1);
     listTwo.insert(2);
-    
+
     listOne.append(3);
     listTwo.append(4);
 
@@ -63,7 +63,7 @@ describe('happy path', () => {
     let listTwo = new LinkedList();
     listOne.insert(1);
     listTwo.insert(2);
-    
+
     listOne.append(3);
     listTwo.append(4);
 
@@ -77,8 +77,8 @@ describe('happy path', () => {
     expect(response.next.next.next.val).toBe(4);
     expect(response.next.next.next.next.val).toBe(5);
     expect(response.next.next.next.next.next).toBeFalsy();
-  })
-})
+  });
+});
 
 
 describe('expected failures', () => {
@@ -97,7 +97,7 @@ describe('expected failures', () => {
 
     expect(response).toBe(listOne);
   });
-})
+});
 
 
 describe('edge cases', () => {
@@ -146,7 +146,7 @@ describe('edge cases', () => {
     let listTwo = new LinkedList();
     listOne.insert(1);
     listTwo.insert(1);
-    
+
     listOne.append(2);
     listTwo.append(2);
 
@@ -157,4 +157,4 @@ describe('edge cases', () => {
     expect(response.next.next.val).toBe(2);
     expect(response.next.next.next.val).toBe(2);
   });
-})
+});
