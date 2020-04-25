@@ -56,16 +56,4 @@ class AnimalShelter {
   }
 }
 
-let shelter = new AnimalShelter();
-
-shelter.enqueue('dog');
-shelter.enqueue('dog');
-shelter.enqueue('dog');
-shelter.enqueue('cat');
-shelter.enqueue('cat');
-shelter.enqueue('dog');
-
-shelter.dequeue('dog');
-shelter.dequeue('cat');
-
 module.exports = AnimalShelter;

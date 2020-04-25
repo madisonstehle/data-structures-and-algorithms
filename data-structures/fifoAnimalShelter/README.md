@@ -1,7 +1,7 @@
 # Animal Shelter
     
 ## Links
-- [Submission PR]()
+- [Submission PR](https://github.com/madisonstehle/data-structures-and-algorithms/pull/41)
 
 
 ## Challenge
@@ -13,7 +13,4 @@ Create a class called `AnimalShelter` which holds only dogs and cats. The shelte
 
 ## Testing
  - Run test files: `npm test fifo-animal-shelter.test.js`
- - Run linter: `npm run lint`
-
-
-## Whiteboard
+ - Run linter: `npm run lint fifo-animal-shelter.js`
