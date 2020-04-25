@@ -40,14 +40,19 @@ class AnimalShelter {
     let nextNode = this.front.next;
     let prevNode = null;
 
-    while(currentNode.animal !== pref){
+    while(currentNode.next !== null && currentNode.animal !== pref){
       prevNode = currentNode;
       currentNode = currentNode.next;
       nextNode = currentNode.next;
     }
-    prevNode.next = nextNode;
-    currentNode.next = null;
-    return currentNode;
+    
+    if(currentNode.animal === pref){
+      prevNode.next = nextNode;
+      currentNode.next = null;
+      return currentNode;
+    }
+
+    console.log('ERROR: that preference does not exist!')
   }
 }
 
@@ -62,3 +67,5 @@ shelter.enqueue('dog');
 
 shelter.dequeue('dog');
 shelter.dequeue('cat');
+
+module.exports = AnimalShelter;
