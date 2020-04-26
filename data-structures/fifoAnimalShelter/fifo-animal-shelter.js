@@ -27,6 +27,8 @@ class AnimalShelter {
   }
 
   dequeue(pref){
+    if(!pref) return null;
+    
     if (!this.front && !this.rear) return console.log('ERROR: List is Empty!');
 
     if (this.front.animal === pref){
@@ -52,7 +54,8 @@ class AnimalShelter {
       return currentNode;
     }
 
-    console.log('ERROR: that preference does not exist!')
+    console.log('ERROR: that preference does not exist!');
+    return null;
   }
 }
 
