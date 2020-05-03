@@ -7,7 +7,9 @@ const BinarySearchTree = Tree.BinarySearchTree;
 
 describe('Happy Path', () => {
   it('instantiate an empty tree', () => {
+    let myTree = new BinarySearchTree();
 
+    expect(myTree).toBeDefined();
   });
 
   it('instantiate a tree and add a single root node', () => {

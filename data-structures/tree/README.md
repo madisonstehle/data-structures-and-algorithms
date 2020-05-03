@@ -29,6 +29,13 @@ Your BinarySearchTree class should have the following functions/methods:
 - `add(val)` - A function that takes in a value as a parameter, and then adds a new Node with that value in the correct locations of the binary search tree
 - `contains(val)` - A function that takes in a value as a parameter, and returns true if that value is in the tree, and false if not
 
+
+## Credits
+- [Binary Search Tree Video](https://www.youtube.com/watch?v=bmaeYtlO2OE)
+- [BST Add Method Notes](https://dev.to/thevenicelive/binary-tree-in-javascript-2n92)
+- [BST- Tree Traversal in JavaScript](https://medium.com/@1991dharapatel/bst-tree-traversal-in-javascript-1182e7dc9867)
+
+
 ## Testing
- - Run test files: `npm test stack.test.js` & `npm test queue.test.js`
+ - Run test files: `npm test tree.test.js`
  - Run linter: `npm run lint`
