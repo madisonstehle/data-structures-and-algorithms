@@ -19,10 +19,11 @@ Code Fellows 301n16 & 401n16
 
 
 ## 401 Data Structure Challenges
-### [Linked List Class](./data-structures/linkedList/README.md)
-### [Merge a Linked List](./data-structures/llMerge/README.md)
-### [Stacks & Queues](./data-structures/queueWithStacks/README.md)
-### [Fifo Animal Shelter](./data-structures/fifoAnimalShelter/README.md)
+- [Linked List Class](./data-structures/linkedList/README.md)
+- [Merge a Linked List](./data-structures/llMerge/README.md)
+- [Stacks & Queues](./data-structures/queueWithStacks/README.md)
+- [Fifo Animal Shelter](./data-structures/fifoAnimalShelter/README.md)
+- [Trees](./data-structures/tree/README.md)
 
 ## 401 Code Challenges
 
