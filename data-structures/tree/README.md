@@ -1,7 +1,7 @@
 # Stacks & Queues
     
 ## Links
-- [Submission PR](https://github.com/madisonstehle/data-structures-and-algorithms/pull/40)
+- [Submission PR]()
 
 
 ## Challenge
@@ -34,6 +34,7 @@ Your BinarySearchTree class should have the following functions/methods:
 - [Binary Search Tree Video](https://www.youtube.com/watch?v=bmaeYtlO2OE)
 - [BST Add Method Notes](https://dev.to/thevenicelive/binary-tree-in-javascript-2n92)
 - [BST- Tree Traversal in JavaScript](https://medium.com/@1991dharapatel/bst-tree-traversal-in-javascript-1182e7dc9867)
+- [Binary Tree Video](https://www.youtube.com/watch?v=zm83jPHZ-jA&list=PLrmLmBdmIlpv_jNDXtJGYTPNQ2L1gdHxu&index=3&t=0s)
 
 
 ## Testing

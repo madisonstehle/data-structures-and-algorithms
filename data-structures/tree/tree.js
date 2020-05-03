@@ -119,24 +119,4 @@ class BinarySearchTree extends BinaryTree {
   }
 }
 
-let tree = new BinarySearchTree();
-tree.add(5);
-
-tree.add(3);
-tree.add(2);
-tree.add(4);
-
-tree.add(8);
-tree.add(7);
-tree.add(9);
-
-console.log(tree.preOrder(tree.root));
-console.log(tree.inOrder(tree.root));
-console.log(tree.postOrder(tree.root));
-
-tree.contains(5, tree.root);
-tree.contains(2, tree.root);
-tree.contains(8, tree.root);
-tree.contains(20, tree.root);
-
 module.exports = { Node, BinaryTree, BinarySearchTree };
