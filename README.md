@@ -26,7 +26,8 @@ Code Fellows 301n16 & 401n16
 - [Trees](./data-structures/tree/README.md)
 
 ## 401 Code Challenges
-- [FizzBuzz Tree](./challenges/fizzBuzzTree/fizz-buzz-tree.js)
+- [FizzBuzz Tree](./challenges/fizzBuzzTree/README.md)
+- [Breadth-First Binary Tree Traversal](./challenges/breadthFirst/README.md)
 
 ### [Reverse an Array](./challenges/arrayReverse/array-reverse.js)
   - **Challenge**: Write a function called reverseArray which takes an array as an argument. Without utilizing any of the built-in methods available to your language, return an array with elements in reversed order.
