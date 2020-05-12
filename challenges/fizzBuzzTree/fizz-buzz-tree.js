@@ -2,13 +2,6 @@
 
 let tree = require('../../data-structures/tree/tree.js');
 
-let testTree = new tree.BinarySearchTree();
-testTree.add(5);
-testTree.add(3);
-testTree.add(8);
-testTree.add(15);
-testTree.add(10);
-
 
 const FizzBuzzTree = (root) => {
   let newVal = '';
@@ -27,7 +20,5 @@ const FizzBuzzTree = (root) => {
 
   return newTreeRoot;
 }
-
-FizzBuzzTree(testTree.root);
 
 module.exports = FizzBuzzTree;
