@@ -15,7 +15,7 @@ Return the new tree.
 
 
 ## Approach & Efficiency
-
+This was really challenging to get my head around initially. Once Sonia demoed this in class and throughly explained it, I was able to write the function in a short, concise way while understanding it much better. This is a recursive solution, since we have a base case to return to with each running of the function. So, this solution's time and efficiency depends on how big the tree is. I'm guessing this is O(n) efficiency.
 
 ## Solution
 ![FizzBuzz Tree Whiteboard]()
