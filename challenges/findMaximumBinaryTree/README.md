@@ -9,4 +9,4 @@ Because this isn't a sorted BST, I knew I would have to find the max value by tr
 
 
 ## Solution
-![Find Maxiumum Value Binary Tree Whiteboard]()
+![Find Maxiumum Value Binary Tree Whiteboard](../../assets/find-maximum-value-tree.PNG)
