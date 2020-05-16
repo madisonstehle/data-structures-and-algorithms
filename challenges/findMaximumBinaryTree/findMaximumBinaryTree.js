@@ -7,15 +7,23 @@ class BinaryTree {
     this.root = null;
   }
 
-  findMaximumValue() {
-    if (!this.root) return 'this tree is empty!';
+  findMaximumValue(root) {
+    if (!root) return 'this tree is empty!';
 
-    let bigNum = this.root.val;
-    let currentNode = this.root;
+    let bigNum = root.val;
+    let leftMax, rightMax;
+    // let currentNode = this.root;
 
-    while(currentNode) {
-      
+    if (root.left){
+      leftMax = this.findMaximumValue(root.left);
     }
+
+    if (root.right){
+      rightMax = this.findMaximumValue(root.right);
+    }
+
+    if (leftMax > bigNum) bigNum = leftMax;
+    if (rightMax > bigNum) bigNum = rightMax;
 
     return bigNum;
   }
@@ -34,6 +42,6 @@ tree.root.right = new Node(5);
 tree.root.right.right = new Node(9);
 tree.root.right.right.left = new Node(4);
 
-tree.findMaximumValue();
+console.log(tree.findMaximumValue(tree.root));
 
 module.exports = BinaryTree;

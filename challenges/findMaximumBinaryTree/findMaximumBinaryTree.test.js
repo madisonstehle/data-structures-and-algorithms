@@ -1,5 +1,6 @@
 'use strict';
 
+let Node = require('../../data-structures/tree/tree.js').Node;
 let BinaryTree = require('./findMaximumBinaryTree.js');
 
 describe('Happy Path', () => {
@@ -8,7 +9,7 @@ describe('Happy Path', () => {
     tree.root = new Node(7);
     tree.root.left = new Node(3);
     tree.root.right = new Node(5);
-    let response = tree.findMaximumValue();
+    let response = tree.findMaximumValue(tree.root);
 
     expect(response).toBe(7);
   });
@@ -18,7 +19,7 @@ describe('Happy Path', () => {
     tree.root = new Node(2);
     tree.root.left = new Node(3);
     tree.root.right = new Node(5);
-    let response = tree.findMaximumValue();
+    let response = tree.findMaximumValue(tree.root);
 
     expect(response).toBe(5);
   });
@@ -31,7 +32,7 @@ describe('Happy Path', () => {
     tree.root.left.left = new Node(2);
     tree.root.right.right = new Node(5);
 
-    let response = tree.findMaximumValue();
+    let response = tree.findMaximumValue(tree.root);
 
     expect(response).toBe(9);
   });
@@ -40,7 +41,7 @@ describe('Happy Path', () => {
 describe('Expected Failure', () => {
   it('will return a string if tree is empty', () => {
     let tree = new BinaryTree();
-    let response = tree.findMaximumValue();
+    let response = tree.findMaximumValue(tree.root);
 
     expect(response).toBe('this tree is empty!');
   })
