@@ -8,12 +8,14 @@ class BinaryTree {
   }
 
   findMaximumValue() {
-    let bigNum = this.root.val;
+    if (!this.root) return 'this tree is empty!';
 
-    if (this.root.left){
+    let bigNum = this.root.val;
+    let currentNode = this.root;
+
+    while(currentNode) {
       
     }
-      if (bigNum < ) 
 
     return bigNum;
   }

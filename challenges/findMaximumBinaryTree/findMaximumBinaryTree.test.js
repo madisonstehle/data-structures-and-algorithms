@@ -35,4 +35,13 @@ describe('Happy Path', () => {
 
     expect(response).toBe(9);
   });
+});
+
+describe('Expected Failure', () => {
+  it('will return a string if tree is empty', () => {
+    let tree = new BinaryTree();
+    let response = tree.findMaximumValue();
+
+    expect(response).toBe('this tree is empty!');
+  })
 })
