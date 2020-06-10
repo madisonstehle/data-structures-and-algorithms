@@ -29,6 +29,7 @@ Code Fellows 301n16 & 401n16
 - [FizzBuzz Tree](./challenges/fizzBuzzTree/fizz-buzz-tree.js)
 
 - [Find Maximum Value in a Binary Tree](./challenges/findMaximumBinaryTree/README.md)
+- [Insertion Sort](./challenges/insertionSort/README.md)
 
 ### [Reverse an Array](./challenges/arrayReverse/array-reverse.js)
   - **Challenge**: Write a function called reverseArray which takes an array as an argument. Without utilizing any of the built-in methods available to your language, return an array with elements in reversed order.

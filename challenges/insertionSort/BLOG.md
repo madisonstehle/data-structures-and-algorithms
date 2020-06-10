@@ -2,6 +2,8 @@
 
 > Review the pseudocode below, then trace the algorithm by stepping through the process with the provided sample array. Document your explanation by creating a blog article.
 
+### See working code [here](./insertionSort.js).
+
 "Insertion Sort" is a function that takes in an array of integers and, like the name suggests, sorts the integers in place.
 
 ## Pseudocode
