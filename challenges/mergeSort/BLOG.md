@@ -4,7 +4,6 @@
 
 ### See working code [here](./mergeSort.js).
 
-
 ## Pseudocode
 ```
 ALGORITHM Mergesort(arr)
@@ -41,3 +40,7 @@ ALGORITHM Merge(left, right, arr)
     else
        set remaining entries in arr to remaining values in left
 ```
+
+## Walkthrough
+
+The psuedocode for this challenge was a little daunting, so I found [this article](https://medium.com/javascript-in-plain-english/javascript-merge-sort-3205891ac060) that talked about merge sort. 
