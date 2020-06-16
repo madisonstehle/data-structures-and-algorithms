@@ -4,6 +4,8 @@
 
 ### See working code [here](./mergeSort.js).
 
+This sorting algorithm is `O(n logn)`, which is better than insertion sort (`O(n^2)`).
+
 ## Pseudocode
 ```
 ALGORITHM Mergesort(arr)

@@ -1,16 +1,12 @@
 'use strict';
 
 const mergeSort = (arr) => {
-  console.log(arr);
   let n = arr.length;
 
   if (n > 1) {
     let mid = n/2;
     let left = [0, ...arr[mid]];
     let right = [mid, ...n];
-
-    console.log('left', left);
-    console.log('right', right)
 
     mergeSort(left);
     mergeSort(right);
