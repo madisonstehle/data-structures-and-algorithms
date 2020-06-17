@@ -1,20 +1,18 @@
 'use strict';
 
-const quickSort = (arr, left = arr[0], right = arr[arr.length-1]) => {
-  console.log('QS left', left);
-  console.log('QS right', right);
+const quickSort = (arr, left = 0, right = arr.length - 1) => {
   if (left < right) {
     let position = partition(arr, left, right);
 
     quickSort(arr, left, position - 1);
     quickSort(arr, position + 1, right);
-  };
 
-  return arr;
+    console.log('quicksort end', arr)
+    return arr;
+  };
 };
 
 const partition = (arr, left, right) => {
-  console.log('partition', arr, left, right);
   let pivot = arr[right];
   let low = left - 1;
 
@@ -31,14 +29,16 @@ const partition = (arr, left, right) => {
 };
 
 const swap = (arr, i, low) => {
-  console.log('SWAP', arr, i, low)
-  let temp = arr[i];
+  let temp;
+  temp = arr[i];
   arr[i] = arr[low];
   arr[low] = temp;
 }
 
 let testArray = [8,4,23,42,16,15];
 
-console.log(quickSort(testArray));
+quickSort(testArray);
+
+console.log('final', testArray);
 
 module.exports = quickSort;

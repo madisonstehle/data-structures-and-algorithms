@@ -2,9 +2,9 @@
 
 > Review the pseudocode below, then trace the algorithm by stepping through the process with the provided sample array. Document your explanation by creating a blog article.
 
-### See working code [here](./quickSort.js).
+### See code [here](./quickSort.js).
 
-
+**Efficiency:** In the worst case, efficiency is O(n^2), but in the best case (which is more likely for this method) it is O(n log n).
 
 ## Pseudocode
 ```
