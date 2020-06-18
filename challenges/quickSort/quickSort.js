@@ -7,7 +7,6 @@ const quickSort = (arr, left = 0, right = arr.length - 1) => {
     quickSort(arr, left, position - 1);
     quickSort(arr, position + 1, right);
 
-    console.log('quicksort end', arr)
     return arr;
   };
 };
@@ -21,11 +20,10 @@ const partition = (arr, left, right) => {
       low++;
       swap(arr, i, low);
     }
-
-    swap(arr, right, low + 1)
-
-    return low + 1;
   }
+
+  swap(arr, right, low + 1)
+  return low + 1;
 };
 
 const swap = (arr, i, low) => {
