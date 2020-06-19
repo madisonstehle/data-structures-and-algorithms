@@ -3,16 +3,26 @@
 const mergeSort = (arr) => {
   let n = arr.length;
 
-  if (n > 1) {
-    let mid = n/2;
-    let left = [0, ...arr[mid]];
-    let right = [mid, ...n];
+  if ( n < 2 ) return arr;
 
-    mergeSort(left);
-    mergeSort(right);
+  let mid = Math.ceil( n/2 );
 
-    merge(left, right, arr);
+  let left = [];
+  for ( let i = 0; i < mid; i++ ) {
+    left.push(arr[i]);
   }
+
+  let right = [];
+  for ( let i = mid; i < arr.length; i++ ) {
+    right.push(arr[i]);
+  }
+
+  mergeSort(left);
+  mergeSort(right);
+
+  merge(left, right, arr);
+
+  return arr;
 }
 
 const merge = (left, right, arr) => {
@@ -23,24 +33,26 @@ const merge = (left, right, arr) => {
   while (i < left.length && j < right.length) {
     if (left[i] <= right[j]){
       arr[k] = left[i];
-      i = i + 1;
+      i++;
     } else {
       arr[k] = right[j];
-      j = j + 1;
+      j++;
     }
-    k = k + 1;
+    k++;
   }
 
-  if (i = left.length){
-    arr = [...arr, ...right];
-  } else {
-    arr = [...left, ...arr];
+  while ( i < left.length ) {
+    arr[k] = left[i];
+    i++;
+    k++;
   }
+
+  while ( j < right.length ) {
+    arr[k] = right[j];
+    j++;
+    k++;
+  }
+
 }
-
-
-let testArr = [8,4,23,42,16,15];
-
-console.log(mergeSort(testArr));
 
 module.exports = mergeSort;
