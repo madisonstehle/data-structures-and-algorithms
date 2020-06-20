@@ -1,4 +1,4 @@
-# Insertion Sort
+# Merge Sort
 
 > Review the pseudocode below, then trace the algorithm by stepping through the process with the provided sample array. Document your explanation by creating a blog article.
 
@@ -41,11 +41,9 @@ ALGORITHM Merge(left, right, arr)
        set remaining entries in arr to remaining values in left
 ```
 
-## Walkthrough
+## Walkthrough 
 
-The psuedocode for this challenge was a little daunting, so I found [this article](https://medium.com/javascript-in-plain-english/javascript-merge-sort-3205891ac060) that talked about merge sort. 
-
-Merge sort is a sorting algorithm that breaks down an array into smaller and smaller units, then merges them all together at the end by comparing individual "arrays"  of single values. This is done by having a recursive `mergeSort` function that breaks down the array, and then calling a secondary `merge` function to compare the values and re-form the array. In the pseudocode above, we will be modifying the initial array in place.
+Merge sort is a sorting algorithm that breaks down an array into smaller and smaller units, then merges them together by comparing individual "arrays"  of single values. This is done by having a recursive `mergeSort` function that breaks down the array, and then calling a secondary `merge` function to compare the values and re-form the array. As in the pseudocode above, we will be modifying the initial array in place.
 
 Let's have an example array of [19, 4, -3, 2, 11] for this walkthrough. At the end, we know we should have a final, sorted array of [-3, 2, 4, 11, 19].
 
