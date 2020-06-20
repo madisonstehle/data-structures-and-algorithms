@@ -18,7 +18,9 @@ const mergeSort = (arr) => {
   }
 
   mergeSort(left);
+  console.log('left', left)
   mergeSort(right);
+  console.log('right', right)
 
   merge(left, right, arr);
 
@@ -29,6 +31,7 @@ const merge = (left, right, arr) => {
   let i = 0;
   let j = 0;
   let k = 0;
+  console.log('left:', left, 'right:', right, 'full:', arr);
 
   while (i < left.length && j < right.length) {
     if (left[i] <= right[j]){
@@ -54,5 +57,11 @@ const merge = (left, right, arr) => {
   }
 
 }
+
+let testArray = [19, 4, -3, 2, 11];
+
+mergeSort(testArray)
+
+console.log('END', testArray)
 
 module.exports = mergeSort;
