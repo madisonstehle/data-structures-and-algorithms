@@ -26,7 +26,8 @@ Code Fellows 301n16 & 401n16
 - [Trees](./data-structures/tree/README.md)
 
 ## 401 Code Challenges
-- [FizzBuzz Tree](./challenges/fizzBuzzTree/fizz-buzz-tree.js)
+- [FizzBuzz Tree](./challenges/fizzBuzzTree/README.md)
+- [Breadth-First Binary Tree Traversal](./challenges/breadthFirst/README.md)
 
 - [Find Maximum Value in a Binary Tree](./challenges/findMaximumBinaryTree/README.md)
 - [Insertion Sort](./challenges/insertionSort/README.md)
