@@ -35,4 +35,4 @@ Code Fellows 301n16 & 401n16
 - [Find Maximum Value in a Binary Tree](./challenges/findMaximumBinaryTree/README.md)
 - [Insertion Sort](./challenges/insertionSort/README.md)
 - [Merge Sort](./challenges/mergeSort/README.md)
-
+- [Quick Sort](./challenges/quickSort/README.md)
