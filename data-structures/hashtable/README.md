@@ -1,7 +1,8 @@
 # Hash Tables
-    
+
+
 ## Links
-- [Submission PR]()
+- [Submission PR](https://github.com/madisonstehle/data-structures-and-algorithms/pull/50)
 
 
 ## Challenge
@@ -12,11 +13,13 @@ Implement a Hashtable with the following methods:
 - `contains`: takes in the key and returns a boolean, indicating if the key exists in the table already.
 - `hash`: takes in an arbitrary key and returns an index in the collection.
 
+
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
+
 ## Credits
-- []()
+- [Hash Tables in Plain English](https://medium.com/javascript-in-plain-english/algorithm-in-javascript-hash-table-7b0464d2b81b)
 
 
 ## Testing
