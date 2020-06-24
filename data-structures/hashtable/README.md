@@ -15,7 +15,7 @@ Implement a Hashtable with the following methods:
 
 
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+Most operations of a Hash Table are O(1).
 
 
 ## Credits
@@ -24,4 +24,3 @@ Implement a Hashtable with the following methods:
 
 ## Testing
  - Run test files: `npm test hashtable.test.js`
- - Run linter: `npm run lint`
