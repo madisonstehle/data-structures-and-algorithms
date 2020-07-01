@@ -38,3 +38,4 @@ Code Fellows 301n16 & 401n16
 - [Merge Sort](./challenges/mergeSort/README.md)
 - [Quick Sort](./challenges/quickSort/README.md)
 - [Repeated Word](./challenges/repeatedWord/README.md)
+- [Tree Intersection](./challenges/treeIntersection/README.md)
