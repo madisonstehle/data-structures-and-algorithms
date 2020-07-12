@@ -19,7 +19,9 @@ Implement your own Graph. The graph should be represented as an adjacency list, 
 
 
 ## Credits
-
+- Co-Author: Randee Orion
+- [Data Structures for Beginners: Graphs](https://adrianmejia.com/data-structures-for-beginners-graphs-time-complexity-tutorial/)
+- [Graph Data Structure](https://www.tutorialspoint.com/Graph-Data-Structure-in-Javascript)
 
 
 ## Testing
