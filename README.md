@@ -25,6 +25,7 @@ Code Fellows 301n16 & 401n16
 - [Fifo Animal Shelter](./data-structures/fifoAnimalShelter/README.md)
 - [Trees](./data-structures/tree/README.md)
 - [Hash Table](./data-structures/hashtable/README.md)
+- [Graph](./data-structures/graph/README.md)
 
 ## 401 Code Challenges
 - [Reverse an Array](./challenges/arrayReverse/README.md)
