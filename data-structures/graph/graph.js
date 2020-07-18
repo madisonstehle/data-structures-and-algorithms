@@ -33,8 +33,7 @@ class Graph {
   }
   
   size() {
-    // - Returns the total number of nodes in the graph
-
+    return this.nodes.length;
   }
 
 }
